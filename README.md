@@ -1,93 +1,53 @@
-# EBMS(Electricity Bill Management System)
-A DBMS app for managing Electricity Bills. It has TWO apps one is for admin and the other is for the user.
+Explanation of the Program:
+Item Class:
 
-Admin app features include adding new connections deleting existing connections checking any complaints raised by the user. As we don't have any hardware to measure electricity consumption the admin can also input the kilowatt consumed by the user.
+The Item class represents an individual product in the billing system, containing properties like itemName, quantity, and price.
+The getTotalPrice() method calculates the total price for that particular item (quantity * price).
+The displayItem() method displays the item details including the total price for that item.
+OnlineBillingSystem Class:
 
-User app features include paying the Bills using a Card, viewing the previous transaction made, downloading the invoice, raising the issues to the admin & changing the password.
+The main class that holds an ArrayList of Item objects.
+The addItem() method allows users to enter the name, quantity, and price for an item and add it to the itemsList.
+The generateBill() method displays the bill by iterating over the itemsList and showing each item’s details and the total price.
+Main Menu:
 
-This project focuses on Database concepts and Java application development. In Database, we have used Triggers and Stored Procedures.<br />
-Technologies used for UI Development
+The program displays a simple menu with options to add an item, generate a bill, or exit.
+Based on user input, the program either adds an item or generates a bill, or exits.
+How to Run the Program:
+Compile and run the OnlineBillingSystem class.
+Follow the instructions on the console to add items and generate the bill.
+You can keep adding items and generate a final bill after all items are added.
+This is a basic example to get you started. You can extend the system by adding features like:
 
-Java <br />
-JavaFX <br />
-AnimateFX <br />
-JDBC <br />
-CSS <br />
-MySQL/SQL <br />
-IDE - IntelliJ, Scene Builder <br />
-Database Management - MySQL Workbench <br />
+Discounts or offers.
+Handling different payment methods (e.g., cash, credit card).
+Saving the bill to a file or database.
+Let me know if you need help with any modifications!
 
-Admin Login Details <br />
-User Name - admin <br />
-Password - admin <br />
 
-Database Name `ESM` <br />
-Username - `root` <br />
-Password - `MySQL@123` <br />
+You said:
+also create a readme file for this code
+ChatGPT said:
+ChatGPT
+Sure! Below is a README file for the Online Billing System in Java. You can save this as README.md for your project.
 
-Fun Fact - This Project Has 5966 lines of code.<br />
-Buttons color Changes when Hovered Over.
+Online Billing System in Java
+Introduction
+This is a simple Online Billing System implemented in Java that allows users to add items to their shopping cart, calculate the total price, and generate a bill. It simulates an online shopping experience where the user can input product details like the name, quantity, and price, and later generate a final bill displaying the total price.
 
-User APP <br />
-Login Page <br />
-Here There is Image SildeShow & SildeShow about facts on Indian Power Grid.
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 53 14 PM" src="https://user-images.githubusercontent.com/80560020/148680549-11888212-1b49-4855-825b-7c315c7422eb.png">
-
-User UI
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 53 22 PM" src="https://user-images.githubusercontent.com/80560020/148680580-fa5c1bf0-eae2-431c-9a80-7b4242770052.png">
-
-Payment 
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 54 50 PM" src="https://user-images.githubusercontent.com/80560020/148680602-6a230ec2-8c01-4f64-bd63-cca8755b30ee.png">
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 55 01 PM" src="https://user-images.githubusercontent.com/80560020/148680613-29bca4be-0033-43cb-b71b-be2c01f36adc.png">
-
-Transaction History <br />
-More History will come by doing more transactions like in PhonePe.
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 55 10 PM" src="https://user-images.githubusercontent.com/80560020/148680632-4676f716-91d0-480f-af7b-ecf471982616.png">
-
-Change Password
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 55 23 PM" src="https://user-images.githubusercontent.com/80560020/148680649-3ebf0ed0-ef33-4944-ab70-3e14a5a4c246.png">
-
-Complaint Section
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 55 33 PM" src="https://user-images.githubusercontent.com/80560020/148680662-ac63903e-0ccb-4ed9-b0b6-33e616c493e4.png">
-
-ADMIN APP <br />
-Login Page <br />
-Here There is Image SildeShow & SildeShow about facts on Indian Power Grid.
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 39 48 PM" src="https://user-images.githubusercontent.com/80560020/148680804-47260873-d402-4c77-9075-e39f8df3ba4f.png">
-
-Admin UI
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 50 58 PM" src="https://user-images.githubusercontent.com/80560020/148680809-d0794a30-81d9-4787-9324-96566979d843.png">
-
-New Connection <br />
-Regular Expressions are used for checking the inputs.
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 51 30 PM" src="https://user-images.githubusercontent.com/80560020/148680823-0db84be1-8285-4391-b62f-a5146e7d1ff1.png">
-
-Bills
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 51 45 PM" src="https://user-images.githubusercontent.com/80560020/148680829-53d7d15d-0913-4c3c-a10a-1770257be5d3.png">
-
-Check existing users
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 52 17 PM" src="https://user-images.githubusercontent.com/80560020/148680842-9c69fbb5-7dc2-42a5-95b0-0e18be7e55fc.png">
-
-Inbox
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 52 33 PM" src="https://user-images.githubusercontent.com/80560020/148680852-dec32fff-7c83-40f2-a2d5-e6f71341a844.png">
-
-<img width="1273" alt="Screenshot 2022-01-09 at 4 52 39 PM" src="https://user-images.githubusercontent.com/80560020/148680864-0d64266f-3315-4308-a0d1-3dd2d2bb4b5c.png">
-
-SQL Tables
-
-![drawSQL-export-2022-01-09_17_21](https://user-images.githubusercontent.com/80560020/148681053-0cdfa7d0-0083-40ca-91ba-51e0ac63ba89.png)
-
-Copyright @ Nithin R, The Oxford College Of Engineering.
+Features
+Add items to the cart by providing product name, quantity, and price.
+Calculate the total cost of the items.
+Generate a bill with itemized details, including the total price.
+Simple console-based interface for interaction.
+Requirements
+Java 8 or above (for running the Java program).
+Basic understanding of Java programming concepts like classes, objects, and ArrayLists.
+Program Structure
+Classes:
+Item: Represents an item in the cart, holding details such as item name, quantity, price per unit, and total price for that item.
+OnlineBillingSystem: The main class that runs the application, provides an interface to interact with the user, and processes the data for billing.
+Methods:
+addItem(): Prompts the user to enter item details and adds the item to the shopping cart.
+generateBill(): Displays the bill showing all added items and calculates the total amount.
+main(): The entry point for the program that displays a menu for users to interact with the system.
